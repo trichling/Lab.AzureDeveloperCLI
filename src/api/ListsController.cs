@@ -26,7 +26,7 @@ public class ListsController : ControllerBase
     {
         var todoList = new TodoList(list.name)
         {
-            Description = list.description + "!!!"
+            Description = list.description
         };
 
         await _repository.AddListAsync(todoList);
@@ -102,7 +102,7 @@ public class ListsController : ControllerBase
 
         var newItem = new TodoItem(list_id, item.name)
         {
-            Name = item.name,
+            Name = item.name + "!!!",
             Description = item.description,
             State = item.state,
             CreatedDate = DateTimeOffset.UtcNow
