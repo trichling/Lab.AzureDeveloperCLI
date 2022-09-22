@@ -26,7 +26,7 @@ public class ListsController : ControllerBase
     {
         var todoList = new TodoList(list.name)
         {
-            Description = list.description
+            Description = list.description + "!!!"
         };
 
         await _repository.AddListAsync(todoList);
